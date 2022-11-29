@@ -17,7 +17,7 @@ const getUserById = (req, res) => {
 
 const postUser = (req, res) => {
     const {first_name, last_name, email, password, birthday} = req.body
-    if (first_name && last_name && email && password && birthday){
+    if (first_name && last_name && email && password){
         const data = userControllers.createUser({first_name, last_name, email, password, birthday})
         res.status(201).json(data)
     }else{
