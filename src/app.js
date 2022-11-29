@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use('/', tasksRouter)
+app.use('/api/v1', tasksRouter)
 
 
 app.listen(port, () => {
